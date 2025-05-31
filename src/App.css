@@ -1,0 +1,219 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Clean, responsive styles for the landing page */
+.container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #222;
+}
+
+.form-container {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(20px);
+  transition: 
+    opacity 0.3s ease-in-out,
+    visibility 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+}
+
+.form-container.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  pointer-events: all;
+  position: relative;
+}
+
+.forms-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.form-container.success {
+  padding-top: 20px;
+}
+
+.payment-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.payment-form-step2 {
+  gap: 12px;
+}
+
+.security-badges {
+  margin-top: 4px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.security-badges-wrapper {
+  max-width: 650px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card-logo-container {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.card-logo-container.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card-logo {
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.success-checkmark {
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color: #333;
+}
+
+input[type="text"] {
+  margin-top: 0.4rem;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+input[type="text"]:focus {
+  border-color: #0070f3;
+  outline: none;
+}
+
+.submit-btn {
+  background: #0070f3;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s;
+}
+
+.submit-btn:hover {
+  background: #005bb5;
+}
+
+.error {
+  color: #d8000c;
+  background: #ffd2d2;
+  border: 1px solid #d8000c;
+  border-radius: 4px;
+  padding: 0.7rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.payment-step, .confirmation {
+  text-align: center;
+}
+
+.fake-stripe {
+  margin-top: 1.5rem;
+  padding: 1.2rem;
+  background: #f6f8fa;
+  border-radius: 8px;
+  border: 1px dashed #b3b3b3;
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 1rem;
+    max-width: 98vw;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+}
